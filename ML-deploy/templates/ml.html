@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML</title>
+</head>
+<style>
+    input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=number], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type=submit] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    </style>
+<body>
+    <div class="login">
+        <h1>Credit</h1>
+
+        <br>
+        {{ prediction_text }}
+        <br>
+        
+          
+       <form style="width:500px; " method="POST">
+       
+       <label>client_id:</label>
+       <input type="number" name="client_id" placeholder="client_id" required="required" />
+       
+       <br>
+       
+       <label>Gender:</label>
+       <select id="gender" name="gender">
+        <option value="">gender</option>
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+      </select>
+       
+       <br>
+       
+       <label>Age:</label>
+       <input type="number" min="17" max='90' name="age" placeholder="Age" required="required" />
+         
+       <br>
+       
+       <label>Marital status: </label>
+       <select id="maritalstatus" name="maritalstatus">
+        <option value="">Marital status</option>
+        <option value="MAR">MAR</option>
+        <option value="UNM">UNM</option>
+        <option value="DIV">DIV</option>
+        <option value="CIV">CIV</option>
+        <option value="WID">WID</option>
+      </select>
+       
+       <br>
+   
+       <label>Job position: </label>
+       <select id="job" name="job">
+        <option value="">Job position</option>
+        <option value="SPC">SPC</option>
+        <option value="UMN">UMN</option>
+        <option value="DIR">DIR</option>
+        <option value="BIS">BIS</option>
+        <option value="ATP">ATP</option>
+        <option value="PNA">PNA</option>
+        <option value="INP">INP</option>
+        <option value="WRK">WRK</option>
+        <option value="NOR">NOR</option>
+        <option value="WRP">WRP</option>
+        <option value="BIU">BIU</option>
+        <option value="WOI">WOI</option>
+        <option value="INV">INV</option>
+        <option value="PNI">PNI</option>
+        <option value="PNV">PNV</option>
+        <option value="PNS">PNS</option>
+        <option value="UNM">UNM</option>
+        <option value="ONB">ONB</option>
+        <option value="HSK">HSK</option>
+      </select>
+       
+       <br>
+       
+       <label>Credit Sum: </label>
+       <input type="number" min="1" name="credit_sum" placeholder="credit sum" required="required" />
+       
+       <br>
+       
+       <label>Credit month: </label>
+       <input type="number" min="1" max="12" name="credit_month" placeholder="credit month" required="required" />
+       
+       <br>
+
+       <label>Education: </label>
+        <select id="education" name="education">
+        <option value="">Education</option>    
+        <option value="GRD">GRD</option>
+        <option value="SCH">SCH</option>
+        <option value="UGR">UGR</option>
+        <option value="PGR">PGR</option>
+        <option value="ACD">ACD</option>
+      </select>
+       
+       <br>
+       
+       <label>Living Region: </label>
+       <select id="living" name="living">
+        <option value="">Living Region</option>
+        <option value="ВОЛОГОДСКАЯ">ВОЛОГОДСКАЯ</option>
+        <option value="БЕЛГОРОДСКАЯ">БЕЛГОРОДСКАЯ</option>
+        <option value="МОСКОВСКАЯ">МОСКОВСКАЯ</option>
+        <option value="КАЛМЫКИЯ">КАЛМЫКИЯ</option>
+        <option value="ДАГЕСТАН">ДАГЕСТАН</option>
+      </select>
+       
+       <br>
+       
+       <label>Monthly income: </label>
+       <input type="number" min="5000" max="95000" name="monthly_income" placeholder="credit month" required="required" />
+       
+       <br>
+       
+       
+       <input type="submit" value="Predict">
+       
+      </form>
+       
+       
+       </div>
+       
+</body>
+</html>

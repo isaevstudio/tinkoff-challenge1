@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+jinja2 = "*"
+joblib = "*"
+starlette = "*"
+starlette-wtf = "*"
+numpy = "==1.23.3"
+pandas = "*"
+dask = "*"
+cython = "*"
+sklearn = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
